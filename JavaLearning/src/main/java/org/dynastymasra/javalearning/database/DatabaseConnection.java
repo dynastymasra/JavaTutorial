@@ -12,15 +12,15 @@ import java.sql.DriverManager;
  */
 
 public class DatabaseConnection {
-    private final static String url = "jdbc:mysql://localhost:3306/sc_study_club";
-    private final static String user = "root";
-    private final static String pass = "";
+    private final static String URL = "jdbc:mysql://localhost:3306/sc_study_club";
+    private final static String USER = "root";
+    private final static String PASS = "";
     private static Connection connection;
 
     public static Connection getConnection() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection(url, user, pass);
+            connection = DriverManager.getConnection(URL, USER, PASS);
         } catch (Exception ex) {
             System.out.println("Database Connection Failed:" + ex.getMessage());
         }
